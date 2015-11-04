@@ -1,0 +1,122 @@
+*{padding: 0;margin:0;box-sizing:border-box;}
+body{background-color: black;color: white;}
+
+ul li{
+	list-style: none;
+}
+/*input样式*/
+input[type="range"]{
+	-webkit-appearance:none;
+	height: 8px;
+	background-color: #999;
+	border-radius: 10px;
+	outline: none;
+}
+input[type="range"]::-webkit-slider-thumb{
+	-webkit-appearance:none;
+	height: 12px;
+	width: 12px;
+	background-color: #fff;
+	border-radius: 100%;
+}
+input[type="range"]{
+	-moz-appearance:none;
+	height: 8px;
+	background-color: #999;
+	border-radius: 10px;
+	outline: none;
+}
+input[type="range"]::-moz-slider-thumb{
+	-moz-appearance:none;
+	height: 12px;
+	width: 12px;
+	background-color: #fff;
+	border-radius: 100%;
+}
+input[type="range"]{
+	-ms-appearance:none;
+	height: 8px;
+	background-color: #999;
+	border-radius: 10px;
+	outline: none;
+}
+input[type="range"]::-moz-slider-thumb{
+	-ms-appearance:none;
+	height: 12px;
+	width: 12px;
+	background-color: #fff;
+	border-radius: 100%;
+}
+
+
+@media screen and (max-width:800px){
+	#option{
+		width: 40%;	
+	}
+}
+@media screen and (min-width:801px){
+	#option{
+		width: 10%;
+	}
+}
+#option{
+	border: 2px solid white;
+	height: 24px;
+	border-radius: 4px;
+	margin: 4px auto;
+}
+#option li{
+	line-height: 20px;
+	width: 50%;
+	text-align: center;
+	float: left;
+}
+.optionSelected{
+	background-color: white;
+	color: black;
+}
+header{
+	text-align: center;
+	position: absolute;
+	height: 150px;
+	top: 10px;
+	left: 10px;right: 10px;
+	/*border: 2px solid white;*/
+}
+#left{
+	position: absolute;
+	top: 170px;
+	left: 10px;
+	bottom:10px;
+	width: 20%;
+	background-color: rgba(122,122,122,0.12);
+	border-radius: 10px;
+	/*border: 2px solid white;*/
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+
+
+#left ul li{
+	text-align: center;margin-top: 4px;
+	overflow: hidden;
+	font-weight: bold;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+.selected{
+	color: lime;
+}
+
+#right{
+	position: absolute;
+	top: 170px;
+	left: calc(20% + 20px);
+	left: -webkit-calc(20% + 20px);
+	left: -moz-calc(20% + 20px);
+	left: -ms-calc(20% + 20px);
+	right: 10px;
+	bottom:10px;
+	/*border: 2px solid white;*/
+}

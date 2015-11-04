@@ -1,0 +1,23 @@
+/*滚轴样式*/
+#left::-webkit-scrollbar {
+    width: 12px;
+}
+/* Track */
+#left::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+#left::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(122,122,122,0.5);  
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+#left::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(122,122,122,0.5); 
+}
+
+
