@@ -64,8 +64,30 @@ addEvent(inner,'mousewheel',function(ev){
 	
 
 });
+//火狐小婊砸
+addEvent(inner,'DOMMouseScroll',function(ev){
+	var ev = ev || window.event;
+	var speed = 30;	//移动速度
+	stopBubble(ev);
+	var direct;
+	if(ev.wheelDelta > 0 || ev.detail < 0){ //IE/Opera/Chrome 下滚为负数 firefox 下滚为正
+		direct = "goTop"
+	}else if(ev.wheelDelta < 0 || ev.detail > 0){
+		direct = "goBottom"
+	}
 
+	
+	if(direct == "goTop" && inner.offsetTop < 0){ //向上滚 			
+		inner.style.top  = parseInt(inner.offsetTop + speed) + 'px';
+		thumb.style.top = ( -(inner.offsetTop -contentH ) ) / innerH * contentH - thumb.offsetHeight + 'px';
 
+	}else if( direct == "goBottom" && -(inner.offsetTop - contentH ) < innerH -30){	//向下滚 
+		inner.style.top  = parseInt(inner.offsetTop - speed) + 'px';
+		thumb.style.top = ( -(inner.offsetTop -contentH ) ) / innerH * contentH - thumb.offsetHeight + 'px';
+	}
+	
+
+});
 
 //绑定事件
 function addEvent(elem, eventName, handler) {
